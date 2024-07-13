@@ -22,7 +22,7 @@ This application allows users to manage assets and groups through a RESTful API.
 1. Clone the Repository:
 
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/gautam417/AssetGroupingService
    cd <repository_directory>
   
 2. Install Dependencies:
