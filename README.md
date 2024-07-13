@@ -249,7 +249,7 @@ curl -X POST http://localhost:4000/api/assets/search \
    - **Method**: DELETE
    - **Description**: Deletes an asset by ID.
 
-   ```bash
+  ```bash 
    curl --request DELETE \
      --url http://localhost:4000/api/assets/<asset_id>
    ```
@@ -259,7 +259,7 @@ curl -X POST http://localhost:4000/api/assets/search \
    - **Method**: POST
    - **Description**: Creates a new group.
 
-   ```bash
+  ```bash 
    curl --request POST \
     --url http://localhost:4000/api/groups \
     --header 'Content-Type: application/json' \
@@ -267,24 +267,24 @@ curl -X POST http://localhost:4000/api/assets/search \
       "name": "group1",
       "rules": [{"field": "type", "operator": "==", "value": "ec2-instance"}]
     }'
-    ```
+  ```
 9. **Get Assets by Group**
 
    - **Endpoint**: `/api/groups/:id/assets`
    - **Method**: GET
    - **Description**: Retrieves assets belonging to a group.
 
-   ```bash
+  ```bash 
    curl --request GET \
     --url http://localhost:4000/api/groups/<group_id>/assets
-   ```
+  ```
 10. **Update a Group**
 
    - **Endpoint**: `/api/groups/:id`
    - **Method**: PATCH
    - **Description**: Updates a group’s fields.
 
-   ```bash
+  ```bash 
   curl --request PATCH \
   --url http://localhost:4000/api/groups/<group_id> \
   --header 'Content-Type: application/json' \
@@ -297,6 +297,7 @@ curl -X POST http://localhost:4000/api/assets/search \
 ## Monitoring and Debugging
 
 ### Phoenix Live Dashboard
+![Phoenix Live Dashboard](https://github.com/gautam417/AssetGroupingService/blob/main/Screen%20Shot%202024-07-12%20at%208.34.50%20PM.png)
 
 Phoenix Live Dashboard is a powerful tool for monitoring and debugging Phoenix applications in real-time. It provides a visual interface to gain insights into various aspects of the application's performance and state.
 
