@@ -12,7 +12,6 @@ defmodule MyApp.Group do
   end
 
   def changeset(group, %{"name" => name, "rules" => rules} = attrs) do
-    Logger.info("Changeset received attrs: #{inspect(attrs)}")
     group
       |> cast(%{"name" => name, "rules" => Jason.encode!(rules)}, [:name, :rules])
       |> validate_required([:name])
@@ -20,7 +19,6 @@ defmodule MyApp.Group do
 
   defp encode_rules(changeset) do
     rules = get_field(changeset, :rules)
-    Logger.info("Rules before encoding: #{inspect(rules)}")
 
     if is_list(rules) or is_map(rules) do
       put_change(changeset, :rules, Jason.encode!(rules))

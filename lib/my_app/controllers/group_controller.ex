@@ -6,8 +6,6 @@ defmodule MyAppWeb.GroupController do
 
 
   def create(conn, %{"name" => name, "rules" => rules}) do
-    Logger.info("Creating group with name: #{name} and rules: #{inspect(rules)}")
-
     case GroupService.create_group(%{"name" => name, "rules" => rules}) do
       {:ok, group} ->
         conn
@@ -28,7 +26,6 @@ defmodule MyAppWeb.GroupController do
   end
 
   def update(conn, %{"id" => id, "group" => group_params}) do
-    Logger.info("Updating group with id: #{id} and params: #{inspect(group_params)}")
     case GroupService.update_group(id, group_params) do
       {:ok, group} ->
         conn
@@ -43,7 +40,6 @@ defmodule MyAppWeb.GroupController do
   end
 
   def get_assets(conn, %{"id" => id}) do
-    Logger.info("Fetching assets by group id: #{id}")
     case GroupService.get_assets_by_group(id) do
       {:ok, assets} ->
         conn

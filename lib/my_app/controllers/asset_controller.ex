@@ -10,6 +10,7 @@ defmodule MyAppWeb.AssetController do
         |> put_status(:created)
         |> json_response(%{status: "success", asset: asset})
       {:error, changeset} ->
+        Logger.error("Failed to create asset: #{inspect(changeset.errors)}")
         conn
         |> put_status(:unprocessable_entity)
         |> json(%{status: "error", errors: changeset.errors})
@@ -36,6 +37,7 @@ defmodule MyAppWeb.AssetController do
         |> put_status(:ok)
         |> json(%{message: message})
       {:error, reason} ->
+        Logger.error("Failed to delete asset")
         conn
         |> put_status(:not_found)
         |> json(%{error: reason})
@@ -55,8 +57,8 @@ defmodule MyAppWeb.AssetController do
         conn
         |> put_status(:ok)
         |> json(%{status: "success", assets: assets})
-
       {:error, :bad_request} ->
+        Logger.error("Failed to search")
         conn
         |> put_status(:bad_request)
         |> json(%{status: "error", message: "Bad request"})
