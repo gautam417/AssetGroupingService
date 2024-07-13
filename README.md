@@ -1,22 +1,23 @@
+# AssetGrouping API Documentation
 
-#### Overview
+## Overview
 
 This application allows users to manage assets and groups through a RESTful API. It includes authentication, asset management, and group management functionalities.
 
-#### Dependencies
+### Dependencies
 
 - **Elixir**: Elixir is the programming language used for developing this application. It runs on the Erlang VM.
 - **Phoenix Framework**: Phoenix is a web framework for Elixir, used here to build the RESTful API server. It provides features like routing, controllers, and views.
 - **Ecto**: Ecto is a database wrapper and query generator for Elixir. It handles database interactions, migrations, and schema definitions.
 - **SQLite3**: SQLite3 is used as the database for this application. It's a lightweight, serverless database engine that stores data in a single file.
 
-#### Prerequisites
+### Prerequisites
 
 - Elixir: Make sure you have Elixir installed. You can check the version using `elixir -v`.
 - Phoenix Framework: Install Phoenix by following the [official installation guide](https://hexdocs.pm/phoenix/installation.html).
 - SQLite3: Ensure you have SQLite3 installed. You can install it via your operating system's package manager or download it from the [SQLite website](https://sqlite.org/download.html).
 
-#### Setting Up the Application
+### Setting Up the Application
 
 1. Clone the Repository:
 
@@ -42,7 +43,7 @@ This application allows users to manage assets and groups through a RESTful API.
 
 By default, the server will run on http://localhost:4000.
 
-#### API Endpoints
+### API Endpoints
 
 Here is a list of available API endpoints and how to use them with curl.
 
@@ -225,6 +226,7 @@ curl -X POST http://localhost:4000/api/assets/search \
   ```bash 
   curl --request GET \
     --url http://localhost:4000/api/assets
+  ```
 
 6. **Update an Asset**
 
@@ -292,19 +294,19 @@ curl -X POST http://localhost:4000/api/assets/search \
   }'
   ```
 
-#### Monitoring and Debugging
+## Monitoring and Debugging
 
-##### Phoenix Live Dashboard
+### Phoenix Live Dashboard
 
 Phoenix Live Dashboard is a powerful tool for monitoring and debugging Phoenix applications in real-time. It provides a visual interface to gain insights into various aspects of the application's performance and state.
 
-#### Features:
+### Features:
 
 - **Metrics**: Real-time metrics including request rates, latencies, memory usage, and more.
 - **Interactive Debugging**: Ability to inspect current connections, running processes, and endpoints.
 - **Database Insights**: View database queries, transaction times, and connection pool usage.
 
-#### Usage:
+### Usage:
 
 1. **Accessing the Dashboard**: Once your application is running in development mode, navigate to `http://localhost:4000/dashboard` in your web browser to access the dashboard.
 
