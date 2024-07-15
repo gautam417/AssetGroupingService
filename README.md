@@ -65,6 +65,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4
   After obtaining the JWT token, include it in the Authorization header for authorized API requests.
 
   The server validates the JWT token with each request, ensuring that the user is authenticated and authorized to access the requested resources. If the token is invalid or expired, the server responds with an appropriate error message.
+  ![Login API](https://github.com/gautam417/AssetGroupingService/blob/main/Login.png)
 
    ```bash
    curl --request POST \
@@ -108,6 +109,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4
     "region": "us-west-2"
   }'
   ```
+![Create Asset API](https://github.com/gautam417/AssetGroupingService/blob/main/Create%20Asset.png)
 
 3. **Get an Asset**
 
@@ -119,6 +121,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4
   curl --request GET \
     --url http://localhost:4000/api/assets/<asset_id>
   ```
+![Get Asset](https://github.com/gautam417/AssetGroupingService/blob/main/Get%20Asset.png)
 
 4. **Search for Asset**
 
@@ -216,6 +219,7 @@ curl -X POST http://localhost:4000/api/assets/search \
   ]
 }'
 ```
+![Search Asset API](https://github.com/gautam417/AssetGroupingService/blob/main/Search%20Asset.png)
 
 5. **List All Assets**
 
@@ -227,6 +231,7 @@ curl -X POST http://localhost:4000/api/assets/search \
   curl --request GET \
     --url http://localhost:4000/api/assets
   ```
+![List Asset API](https://github.com/gautam417/AssetGroupingService/blob/main/List%20Assets.png)
 
 6. **Update an Asset**
 
@@ -253,6 +258,8 @@ curl -X POST http://localhost:4000/api/assets/search \
    curl --request DELETE \
      --url http://localhost:4000/api/assets/<asset_id>
    ```
+![Delete Asset](https://github.com/gautam417/AssetGroupingService/blob/main/Delete%20Asset.png)
+
 8. **Create a Group**
 
    - **Endpoint**: `/api/groups`
@@ -268,6 +275,8 @@ curl -X POST http://localhost:4000/api/assets/search \
       "rules": [{"field": "type", "operator": "==", "value": "ec2-instance"}]
     }'
   ```
+![Create Group](https://github.com/gautam417/AssetGroupingService/blob/main/Create%20Group.png)
+
 9. **Get Assets by Group**
 
    - **Endpoint**: `/api/groups/:id/assets`
@@ -278,6 +287,8 @@ curl -X POST http://localhost:4000/api/assets/search \
    curl --request GET \
     --url http://localhost:4000/api/groups/<group_id>/assets
   ```
+![Get Asset by Group](https://github.com/gautam417/AssetGroupingService/blob/main/Get%20Assets%20by%20Group.png)
+
 10. **Update a Group**
 
    - **Endpoint**: `/api/groups/:id`
